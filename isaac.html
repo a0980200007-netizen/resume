@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的履歷 - AU 111054055</title>
+  <style>
+    body {
+      font-family: 'Microsoft JhengHei', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: white;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      color: #333;
+    }
+
+    .info, .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      border-bottom: 2px solid #007BFF;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin-bottom: 10px;
+      color: #007BFF;
+    }
+
+    .student-id {
+      color: gray;
+      font-size: 0.9em;
+    }
+
+    button {
+      background-color: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>isaac <span class="student-id">(學號: AU 111054055)</span></h1>
+
+    <div class="info">
+      <p><strong>Email：</strong> xiaoming@example.com</p>
+      <p><strong>電話：</strong> 0912-345-678</p>
+      <p><strong>地址：</strong> 台北市中正區仁愛路一段1號</p>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">學歷</h2>
+      <ul>
+        <li>國立台灣大學 資訊工程學系 - 學士 (2021 - 現在)</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">技能</h2>
+      <ul>
+        <li>HTML / CSS / JavaScript</li>
+        <li>Python / Java</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">自我介紹</h2>
+      <p id="intro">
+        我是一位熱愛程式設計的大學生，喜歡學習新技術與挑戰困難問題。
+      </p>
+      <button onclick="changeIntro()">改變自我介紹</button>
+    </div>
+  </div>
+
+  <script>
+    function changeIntro() {
+      const intro = document.getElementById('intro');
+      intro.textContent = '我對前端開發特別有興趣，目標是成為全端工程師！';
+    }
+  </script>
+</body>
+</html>
