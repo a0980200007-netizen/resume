@@ -15,10 +15,10 @@
     .container {
       max-width: 800px;
       margin: 50px auto;
-      background-color: white;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
     }
 
     h1, h2 {
@@ -44,9 +44,9 @@
 
     .cover-photo {
       width: 100%;
-      border-radius: 10px;
-      display: block;
-      margin-bottom: 20px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      object-fit:  cover;
     }
 
     button {
@@ -66,7 +66,7 @@
 <body>
   <div class="container">
     <!-- 封面照片 -->
-    <img src="ef2af179-22df-4e09-8fb1-7efdd5f0b4b1.png" alt="封面照片" class="cover-photo">
+    <img src="./image/下載.jpg" alt="封面照片" class="cover-photo">
 
     <h1>isaac <span class="student-id">(學號: AU 111054055)</span></h1>
 
@@ -104,8 +104,13 @@
   <script>
     function changeIntro() {
       const intro = document.getElementById('intro');
-      intro.textContent = '我對前端開發特別有興趣，目標是成為全端工程師！';
+      intro.style.transition = 'opacity 0.5s';
+      intro.style.opacity = '0';
+      setTimeout(() => {
+        intro.textContent = '我對前端開發特別有興趣，目標是成為全端工程師！';
+        intro.style.opacity = '1';
+      }, 500);
     }
-  </script>
+    </script>
 </body>
 </html>
