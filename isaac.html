@@ -3,22 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>我的履歷 - AU 111054055</title>
+  <title>isaac 的履歷 - AU 111054055</title>
+  <meta name="description" content="isaac 的個人履歷，國立台灣大學資訊工程學系，專注於前端與全端開發。">
+  <meta property="og:title" content="isaac 的履歷 - AU 111054055">
+  <meta property="og:description" content="國立台灣大學資訊工程學系學生，熱愛程式設計與前端開發。">
+  <meta property="og:image" content="./image/cover.jpg">
+  <meta property="og:type" content="website">
+
   <style>
     body {
       font-family: 'Microsoft JhengHei', sans-serif;
       background-color: #f4f4f4;
       margin: 0;
       padding: 0;
+      line-height: 1.6;
     }
 
     .container {
       max-width: 800px;
       margin: 50px auto;
-      background-color: white;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     h1, h2 {
@@ -26,7 +39,7 @@
     }
 
     .info, .section {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .section-title {
@@ -42,6 +55,14 @@
       font-size: 0.9em;
     }
 
+    .cover-photo {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      object-fit: cover;
+      max-height: 320px;
+    }
+
     button {
       background-color: #007BFF;
       color: white;
@@ -49,43 +70,92 @@
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      transition: background-color 0.3s;
     }
 
     button:hover {
       background-color: #0056b3;
     }
+
+    a {
+      color: #007BFF;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* 手機 RWD */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        margin: 20px;
+      }
+      h1 {
+        font-size: 1.5em;
+      }
+      h2 {
+        font-size: 1.2em;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- 封面照片 -->
+    <img src="./image/下載.jpg" alt="封面照片" class="cover-photo" loading="lazy">
+
     <h1>isaac <span class="student-id">(學號: AU 111054055)</span></h1>
 
     <div class="info">
       <p><strong>Email：</strong> xiaoming@example.com</p>
       <p><strong>電話：</strong> 0912-345-678</p>
       <p><strong>地址：</strong> 台北市中正區仁愛路一段1號</p>
+      <p><strong>GitHub：</strong> <a href="https://github.com/a0980200007-netizen" target="_blank">a0980200007-netizen</a></p>
     </div>
 
     <div class="section">
       <h2 class="section-title">學歷</h2>
       <ul>
         <li>國立台灣大學 資訊工程學系 - 學士 (2021 - 現在)</li>
+        <li>台北市立建國中學 - 高中部畢業 (2018 - 2021)</li>
       </ul>
     </div>
 
     <div class="section">
       <h2 class="section-title">技能</h2>
       <ul>
-        <li>HTML / CSS / JavaScript</li>
-        <li>Python / Java</li>
-        <li>Git / GitHub</li>
+        <li>前端開發：HTML / CSS / JavaScript / React</li>
+        <li>後端開發：Python (Flask, FastAPI) / Node.js</li>
+        <li>版本控制：Git / GitHub</li>
+        <li>其他：Linux 基礎操作、UI/UX 介面設計</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">專案與作品集</h2>
+      <ul>
+        <li><a href="https://a0980200007-netizen.github.io/resume/" target="_blank">個人履歷網站</a> - 使用純 HTML/CSS/JS 製作</li>
+        <li><a href="https://github.com/a0980200007-netizen/web-app-demo" target="_blank">Web App Demo</a> - 使用 React 製作簡易應用程式</li>
+        <li><a href="https://github.com/a0980200007-netizen/python-bot" target="_blank">Python Discord Bot</a> - 使用 Discord API 開發聊天機器人</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">經驗</h2>
+      <ul>
+        <li>系上專題小組 — 開發「學習資源分享平台」(2024)</li>
+        <li>系學會資訊組 — 管理網站與報名系統 (2023)</li>
+        <li>個人接案 — 製作小型商家網頁與資料表單 (2022)</li>
       </ul>
     </div>
 
     <div class="section">
       <h2 class="section-title">自我介紹</h2>
       <p id="intro">
-        我是一位熱愛程式設計的大學生，喜歡學習新技術與挑戰困難問題。
+        我是一位熱愛程式設計與技術挑戰的學生，喜歡將想法轉化成能被使用的作品。  
+        對前端設計與使用者體驗特別有興趣，未來希望成為具備全端能力的工程師。
       </p>
       <button onclick="changeIntro()">改變自我介紹</button>
     </div>
@@ -94,7 +164,12 @@
   <script>
     function changeIntro() {
       const intro = document.getElementById('intro');
-      intro.textContent = '我對前端開發特別有興趣，目標是成為全端工程師！';
+      intro.style.transition = 'opacity 0.5s';
+      intro.style.opacity = '0';
+      setTimeout(() => {
+        intro.textContent = '我對前端與全端開發特別有熱情，希望能持續學習、挑戰自我，打造有價值的應用與網站。';
+        intro.style.opacity = '1';
+      }, 500);
     }
   </script>
 </body>
